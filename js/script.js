@@ -1,7 +1,3 @@
-// Fixes applied:
-// 1. Excluded HRA from Gross Income; it's not part of taxable income directly.
-// 2. Corrected the income tax slab logic to apply slabs progressively.
-// 3. Added complete data reset and output clearing when switching regimes.
 
 let currentRegime = 'old';
 
@@ -23,7 +19,6 @@ const taxSlabs = {
 };
 
 function resetAllFields() {
-    // Reset all input fields
     document.getElementById('basicSalary').value = '';
     document.getElementById('hra').value = '';
     document.getElementById('otherIncome').value = '';
@@ -31,7 +26,6 @@ function resetAllFields() {
     document.getElementById('section80D').value = '';
     document.getElementById('hraExemption').value = '';
     
-    // Clear all output values
     document.getElementById('grossIncome').textContent = '₹0';
     document.getElementById('totalDeductions').textContent = '₹0';
     document.getElementById('taxableIncome').textContent = '₹0';
@@ -39,7 +33,6 @@ function resetAllFields() {
     document.getElementById('cess').textContent = '₹0';
     document.getElementById('netTax').textContent = '₹0';
     
-    // Remove animation class from results
     document.getElementById('resultsGrid').classList.remove('animated');
 }
 
@@ -49,7 +42,6 @@ function switchRegime(regime) {
     document.getElementById('newRegimeBtn').classList.toggle('active', regime === 'new');
     document.getElementById('deductionsSection').style.display = regime === 'old' ? 'block' : 'none';
 
-    // Reset all fields and output when switching regimes
     resetAllFields();
 
     updateTaxSlabs();
@@ -133,7 +125,6 @@ function calculateIncomeTax(income) {
     return Math.round(tax);
 }
 
-// Setup event listeners
 ['basicSalary', 'hra', 'otherIncome', 'section80C', 'section80D', 'hraExemption'].forEach(id => {
     document.getElementById(id).addEventListener('input', () => {
         if (document.getElementById('basicSalary').value) {
