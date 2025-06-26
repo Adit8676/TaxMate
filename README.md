@@ -2,7 +2,7 @@
 
 TaxMate is a simple and effective Indian income tax calculator built with **HTML5**, **CSS3**, and **JavaScript**. It supports both old and new tax regimes, lets users input income and deductions, and computes the net tax liability with a clear breakdown.
 
-**Live Demo**: [https://adit8676.github.io/TaxMate/](https://adit8676.github.io/TaxMate/)
+**Live Demo**: [Try TaxMate Now](https://adit8676.github.io/TaxMate/)
 
 ---
 
@@ -31,9 +31,13 @@ TaxMate is a simple and effective Indian income tax calculator built with **HTML
 
 ---
 
-## Getting Started Locally
+### Future Enhancements
 
-```bash
-git clone https://github.com/Adit8676/TaxMate.git
-cd TaxMate
-open index.html  # or just double-click it
+- Downloadable tax report in PDF format
+- Visual summary of income, deductions, and tax via charts
+- Dark mode toggle with preference persistence
+
+---
+
+Developed by [Aditya Singh](mailto:aditya09313@gmail.com) **|** [LinkedIn](https://linkedin.com/in/aditya8676) **|** [GitHub](https://github.com/Adit8676)
+
