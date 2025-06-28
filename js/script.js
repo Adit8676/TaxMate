@@ -76,7 +76,6 @@ function calculateTax() {
     const basicSalary = parseFloat(document.getElementById('basicSalary').value) || 0;
     const otherIncome = parseFloat(document.getElementById('otherIncome').value) || 0;
 
-    // Exclude HRA (only hra exemption matters)
     const grossIncome = basicSalary + otherIncome;
 
     let totalDeductions = 0;
@@ -86,14 +85,14 @@ function calculateTax() {
         const hraExemption = parseFloat(document.getElementById('hraExemption').value) || 0;
         totalDeductions = section80C + section80D + hraExemption;
     } else {
-        totalDeductions = 50000; // standard deduction
+        totalDeductions = 50000; 
     }
 
     const taxableIncome = Math.max(0, grossIncome - totalDeductions);
     let incomeTax = calculateIncomeTax(taxableIncome);
 
     if (currentRegime === 'new' && taxableIncome <= 700000) {
-        incomeTax = 0; // 87A rebate
+        incomeTax = 0; 
     }
 
     const cess = incomeTax * 0.04;
