@@ -36,6 +36,7 @@ function resetAllFields() {
     document.getElementById('resultsGrid').classList.remove('animated');
 }
 
+
 function switchRegime(regime) {
     currentRegime = regime;
     document.getElementById('oldRegimeBtn').classList.toggle('active', regime === 'old');
