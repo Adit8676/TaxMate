@@ -1,4 +1,3 @@
-
 let currentRegime = 'old';
 
 const taxSlabs = {
